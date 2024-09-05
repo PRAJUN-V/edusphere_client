@@ -1,0 +1,21 @@
+/* Login.css */
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  input::placeholder {
+    color: #a0aec0;
+  }
+
+.relative .Field {
+    padding-right: 2.5rem; /* Add extra padding to the right for the eye icon */
+  }
+  
+  .relative .absolute {
+    right: 0.75rem; /* Adjust the right position of the eye icon */
+  }
+  
+  .mb-4.relative .text-red-500 {
+    margin-top: 0.5rem; /* Ensure the error message is displayed below the input field */
+  }
+  
