@@ -34,7 +34,7 @@ const AddQuestionModal = ({ examId, onClose }) => {
 
         setError('');
         try {
-            await axios.post('http://127.0.0.1:8000/exam/question/', {
+            await axios.post('https://edusphere.duckdns.org/exam/question/', {
                 exam: examId,
                 question_text: questionText,
                 marks: parseInt(marks),

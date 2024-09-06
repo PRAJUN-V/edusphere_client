@@ -12,7 +12,7 @@ export const AdminDashboard = () => {
 
     // Fetch dashboard data
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/dashboard/admin')
+        fetch('https://edusphere.duckdns.org/dashboard/admin')
             .then(response => response.json())
             .then(data => setDashboardData(data))
             .catch(error => console.error('Error fetching dashboard data:', error));
@@ -20,7 +20,7 @@ export const AdminDashboard = () => {
 
     // Fetch course stats data
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/dashboard/admin/course-stat')
+        fetch('https://edusphere.duckdns.org/dashboard/admin/course-stat')
             .then(response => response.json())
             .then(data => setCourseStats(data))
             .catch(error => console.error('Error fetching course stats:', error));

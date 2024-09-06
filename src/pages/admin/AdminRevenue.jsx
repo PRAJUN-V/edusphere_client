@@ -12,7 +12,7 @@ export const AdminRevenue = () => {
     useEffect(() => {
         const fetchRevenueData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/api/admin/revenue/');
+                const response = await fetch('https://edusphere.duckdns.org/api/admin/revenue/');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }

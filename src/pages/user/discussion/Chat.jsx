@@ -28,7 +28,7 @@ export const Chat = () => {
 
     const fetchRooms = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:8000/chat2/rooms/');
+            const response = await axios.get('https://edusphere.duckdns.org/chat2/rooms/');
             setRooms(response.data);
         } catch (error) {
             console.error('Error fetching rooms:', error);
@@ -37,7 +37,7 @@ export const Chat = () => {
 
     const fetchMessages = async (roomId) => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/chat2/rooms/${roomId}/messages/`);
+            const response = await axios.get(`https://edusphere.duckdns.org/chat2/rooms/${roomId}/messages/`);
             setMessages(response.data);
         } catch (error) {
             console.error('Error fetching messages:', error);
@@ -55,7 +55,7 @@ export const Chat = () => {
             wsRef.current.close();
         }
 
-        const socket = new WebSocket(`ws://127.0.0.1:8000/ws/messages/${roomId}/`);
+        const socket = new WebSocket(`wss://edusphere.duckdns.org/ws/messages/${roomId}/`);
         wsRef.current = socket;
         setWebSocket(socket);
 

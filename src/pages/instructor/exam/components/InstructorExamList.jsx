@@ -9,7 +9,7 @@ const InstructorExamList = ({ instructorId }) => {
     useEffect(() => {
         const fetchExams = async () => {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/exam/tutor/${instructorId}/exams/`);
+                const response = await axios.get(`https://edusphere.duckdns.org/exam/tutor/${instructorId}/exams/`);
                 setExams(response.data);
             } catch (error) {
                 console.error('Error fetching exams:', error);

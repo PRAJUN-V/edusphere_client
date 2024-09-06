@@ -9,7 +9,7 @@ const InstructorList = () => {
   useEffect(() => {
     const fetchInstructors = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/admin_api/instructor-list/');
+        const response = await fetch('https://edusphere.duckdns.org/admin_api/instructor-list/');
         if (response.ok) {
           const data = await response.json();
           setInstructors(data);

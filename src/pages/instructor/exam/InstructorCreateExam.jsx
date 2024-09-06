@@ -28,7 +28,7 @@ const InstructorCreateExam = () => {
 
     useEffect(() => {
         if (instructorId) {
-            axios.get(`http://127.0.0.1:8000/exam/courses/${instructorId}/`)
+            axios.get(`https://edusphere.duckdns.org/exam/courses/${instructorId}/`)
                 .then(response => {
                     setCourses(response.data);
                 })
@@ -40,7 +40,7 @@ const InstructorCreateExam = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://127.0.0.1:8000/exam/create-exam/', {
+        axios.post('https://edusphere.duckdns.org/exam/create-exam/', {
             instructor: instructorId,
             course: selectedCourse,
             title: title

@@ -6,7 +6,7 @@ const fetchRevenueData = async (token) => { // Added token parameter
   try {
     const decodedToken = jwtDecode(token);
     const instructorId = decodedToken.user_id;
-    const response = await fetch(`http://localhost:8000/api/instructor/revenue/${instructorId}/`, {
+    const response = await fetch(`https://edusphere.duckdns.org/api/instructor/revenue/${instructorId}/`, {
       headers: {
         'Authorization': `Bearer ${token}`,
         'Content-Type': 'application/json'

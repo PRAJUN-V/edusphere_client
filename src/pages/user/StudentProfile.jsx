@@ -36,7 +36,7 @@ export const StudentProfile = () => {
                         last_name: userData.last_name || '',
                         username: userData.username || '',
                         email: userData.email || '',
-                        profile_picture: userData.profile.profile_image ? `http://127.0.0.1:8000${userData.profile.profile_image}` : 'https://randomuser.me/api/portraits/men/81.jpg',
+                        profile_picture: userData.profile.profile_image ? `https://edusphere.duckdns.org${userData.profile.profile_image}` : 'https://randomuser.me/api/portraits/men/81.jpg',
                         phone_number: userData.profile.phone_number || '' // Fetch phone number
                     });
                 } catch (error) {
@@ -76,7 +76,7 @@ export const StudentProfile = () => {
                         last_name: updatedUserData.last_name || '',
                         username: updatedUserData.username || '',
                         email: updatedUserData.email || '',
-                        profile_picture: updatedUserData.profile.profile_image ? `http://127.0.0.1:8000${updatedUserData.profile.profile_image}` : 'https://randomuser.me/api/portraits/men/81.jpg',
+                        profile_picture: updatedUserData.profile.profile_image ? `https://edusphere.duckdns.org${updatedUserData.profile.profile_image}` : 'https://randomuser.me/api/portraits/men/81.jpg',
                         phone_number: updatedUserData.profile.phone_number || '' // Fetch phone number
                     });
                     toast.success('User data updated successfully!'); // Show success notification

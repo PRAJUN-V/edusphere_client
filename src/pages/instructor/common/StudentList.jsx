@@ -25,7 +25,7 @@ const StudentList = () => {
 
     const fetchStudents = async (instructorId) => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/instructor/student/${instructorId}`);
+        const response = await fetch(`https://edusphere.duckdns.org/instructor/student/${instructorId}`);
         if (response.ok) {
           const data = await response.json();
           setStudents(data);

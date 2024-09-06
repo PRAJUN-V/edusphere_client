@@ -8,7 +8,7 @@ export const StudentExam = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/student-exam/exams-list/')
+        fetch('https://edusphere.duckdns.org/student-exam/exams-list/')
             .then(response => response.json())
             .then(data => setExams(data))
             .catch(error => console.error('Error fetching exams:', error));

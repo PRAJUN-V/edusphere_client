@@ -7,7 +7,7 @@ const ChatRoom = ({ roomName, userId }) => {
 
     useEffect(() => {
         const chatSocket = new WebSocket(
-            `ws://localhost:8000/ws/chat/${roomName}/`
+            `wss://edusphere.duckdns.org/ws/chat/${roomName}/`
         );
 
         chatSocket.onmessage = function(e) {

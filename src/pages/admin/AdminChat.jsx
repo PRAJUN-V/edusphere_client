@@ -17,7 +17,7 @@ export const AdminChat = () => {
 
     const fetchRooms = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:8000/chat2/rooms/');
+            const response = await axios.get('https://edusphere.duckdns.org/chat2/rooms/');
             setRooms(response.data);
         } catch (error) {
             toast.error('Error fetching rooms');
@@ -27,7 +27,7 @@ export const AdminChat = () => {
     // Delete a room by id
     const deleteRoom = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:8000/chat2/rooms/delete/${id}/`);
+            await axios.delete(`https://edusphere.duckdns.org/chat2/rooms/delete/${id}/`);
             toast.success('Room deleted successfully');
             fetchRooms(); // Refresh the room list
         } catch (error) {
@@ -43,7 +43,7 @@ export const AdminChat = () => {
         }
 
         try {
-            await axios.post('http://127.0.0.1:8000/chat2/rooms/create/', { room_name: newRoomName });
+            await axios.post('https://edusphere.duckdns.org/chat2/rooms/create/', { room_name: newRoomName });
             toast.success('Room created successfully');
             fetchRooms(); // Refresh the room list
             setNewRoomName('');

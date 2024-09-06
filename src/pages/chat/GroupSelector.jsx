@@ -7,7 +7,7 @@ function GroupSelector() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/chat-groups/')
+        fetch('https://edusphere.duckdns.org/api/chat-groups/')
             .then(response => response.json())
             .then(data => setGroups(data))
             .catch(error => console.error('Error fetching groups:', error));

@@ -60,7 +60,7 @@ export const InstructorDashboard = () => {
         const instructorId = decodedToken.user_id;
 
         const response = await fetch(
-          `http://127.0.0.1:8000/dashboard/instructor-stats/${instructorId}/`
+          `https://edusphere.duckdns.org/dashboard/instructor-stats/${instructorId}/`
         );
         if (!response.ok) {
           throw new Error('Failed to fetch statistics');
@@ -70,7 +70,7 @@ export const InstructorDashboard = () => {
 
         // Fetch course details
         const coursesResponse = await fetch(
-          `http://127.0.0.1:8000/dashboard/instructor-course/${instructorId}/`
+          `https://edusphere.duckdns.org/dashboard/instructor-course/${instructorId}/`
         );
         if (!coursesResponse.ok) {
           throw new Error('Failed to fetch course details');
@@ -100,7 +100,7 @@ export const InstructorDashboard = () => {
 
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/dashboard/instructor/enrollment-data/${instructorId}/?year=${year}&month=${month}`
+          `https://edusphere.duckdns.org/dashboard/instructor/enrollment-data/${instructorId}/?year=${year}&month=${month}`
         );
         if (!response.ok) {
           throw new Error('Failed to fetch enrollment data');

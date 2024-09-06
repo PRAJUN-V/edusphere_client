@@ -23,7 +23,7 @@ export const StudentExamDetails = () => {
 
     useEffect(() => {
         // Fetch exam details
-        fetch(`http://127.0.0.1:8000/student-exam/exam-details/${examId}/`)
+        fetch(`https://edusphere.duckdns.org/student-exam/exam-details/${examId}/`)
             .then(response => response.json())
             .then(data => {
                 setExam(data);
@@ -62,7 +62,7 @@ export const StudentExamDetails = () => {
         const requestBody = { student_id: studentId, ...selectedOptions };
         console.log('Submitting:', requestBody); // Log the request body
 
-        fetch(`http://127.0.0.1:8000/student-exam/exam-details/${examId}/`, {
+        fetch(`https://edusphere.duckdns.org/student-exam/exam-details/${examId}/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

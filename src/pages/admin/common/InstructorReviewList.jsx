@@ -14,7 +14,7 @@ const InstructorReviewList = () => {
   useEffect(() => {
     const fetchInstructors = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/admin_api/new_instructors/');
+        const response = await fetch('https://edusphere.duckdns.org/admin_api/new_instructors/');
         if (response.ok) {
           const data = await response.json();
           setInstructors(data);
@@ -34,7 +34,7 @@ const InstructorReviewList = () => {
 
   const handleAccept = async (instructor) => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/admin_api/accept_instructor/', {
+      const response = await fetch('https://edusphere.duckdns.org/admin_api/accept_instructor/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const InstructorReviewList = () => {
 
   const handleReject = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/admin_api/reject_instructor/', {
+      const response = await fetch('https://edusphere.duckdns.org/admin_api/reject_instructor/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

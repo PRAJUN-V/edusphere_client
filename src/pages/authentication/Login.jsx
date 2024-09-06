@@ -48,7 +48,7 @@ export const Login = () => {
       console.log(id);
 
       if (userRole === "instructor") {
-        const profileRes = await api.get(`http://127.0.0.1:8000/instructor/profiles/${id}`);
+        const profileRes = await api.get(`/instructor/profiles/${id}`);
         const profile = profileRes.data;
 
         if (!profile.application_submitted) {

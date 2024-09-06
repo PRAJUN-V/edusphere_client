@@ -4,7 +4,7 @@ import api from '../../../api'; // Adjust the import based on your project struc
 const TopInstructors = () => {
     const [instructors, setInstructors] = useState([]);
     const dummyImage = 'https://via.placeholder.com/150'; // URL for the dummy image
-    const baseURL = 'http://127.0.0.1:8000'; // Base URL for Django server
+    const baseURL = 'https://edusphere.duckdns.org'; // Base URL for Django server
 
     useEffect(() => {
         // Fetch top instructors from the API
