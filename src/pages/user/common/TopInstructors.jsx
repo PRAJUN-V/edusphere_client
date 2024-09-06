@@ -28,7 +28,7 @@ const TopInstructors = () => {
                     <div key={instructor.id} className="bg-white shadow-md rounded-full p-4 flex flex-col items-center text-center">
                         <div className="w-32 h-32 mb-4 overflow-hidden rounded-full">
                             <img
-                                src={instructor.profile_image ? `${baseURL}${instructor.profile_image}` : dummyImage}
+                                src={instructor.profile_image ? `${instructor.profile_image}` : dummyImage}
                                 alt={instructor.username}
                                 className="w-full h-full object-cover"
                             />
