@@ -30,7 +30,7 @@ export const Login = () => {
 
   const reachGoogle = () => {
     const clientID = "410678163577-sg06a0kp4d8sgfh6g2ug4i771k5ri7ua.apps.googleusercontent.com"; // Replace with your actual Client ID
-    const callBackURI = "https://edusphere.duckdns.org/"; // Replace with your actual callback URI
+    const callBackURI = "https://edusphere-client.vercel.app/"; // Replace with your actual callback URI
     window.location.replace(`https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=${callBackURI}&prompt=consent&response_type=code&client_id=${clientID}&scope=openid%20email%20profile&access_type=offline`);
   };
 
