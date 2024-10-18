@@ -52,6 +52,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* common routes */}
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
@@ -194,12 +195,6 @@ function App() {
         <Route path="/student/profile" element={
           <ProtectedRoute requiredRole="student">
             <StudentProfile />
-          </ProtectedRoute>
-        } />
-
-        <Route path="/" element={
-          <ProtectedRoute requiredRole="student">
-            <Home />
           </ProtectedRoute>
         } />
 

@@ -152,10 +152,10 @@ export const Login = () => {
             </Link>
           </div>
           <div>
-            {/* <Link to="/" className="text-blue-500 hover:underline">
+            <Link to="/" className="text-blue-500 hover:underline">
               Home
             </Link>
-            {" | "} */}
+            {" | "}
             <Link to="/register" className="text-blue-500 hover:underline">
               Register
             </Link>

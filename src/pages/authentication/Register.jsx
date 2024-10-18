@@ -240,10 +240,10 @@ export const Register = () => {
         )}
 
         <div className="text-center">
-          {/* <Link to="/" className="text-blue-500 hover:underline">
+          <Link to="/" className="text-blue-500 hover:underline">
             Home
           </Link>
-          {" | "} */}
+          {" | "}
           <Link to="/login" className="text-blue-500 hover:underline">
             Login
           </Link>
